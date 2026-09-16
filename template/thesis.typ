@@ -29,7 +29,7 @@
 //-------------------------------------
 // Content
 //
-#include("/main/00-acknowledgements.typ")
+#include "/main/00-acknowledgements.typ"
 #include "/main/01-abstract.typ"
 #include "/main/02-introduction.typ"
 #include "/main/03-analysis.typ"
