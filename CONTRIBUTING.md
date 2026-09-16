@@ -1,6 +1,6 @@
-# Contributing to hei-synd-thesis
+# Contributing to MSE-Thesis-Template
 
-Thanks for your interest in improving the **HEI Typst Thesis Template**! ❤️
+Thanks for your interest in improving the **MSE Thesis Typst Template**! ❤️
 We welcome all contributions — from typo fixes to feature suggestions and style refinements.
 
 If you like the project but can’t contribute code right now, you can still help:
@@ -27,9 +27,9 @@ If you like the project but can’t contribute code right now, you can still hel
 
 Before opening a new issue, please:
 
-1. Check the [README](https://github.com/hei-templates/hei-synd-thesis/blob/main/README.md) and example files.
-2. Search [existing issues](https://github.com/hei-templates/hei-synd-thesis/issues).
-3. If none fit, open a new [issue](https://github.com/hei-templates/hei-synd-thesis/issues/new) with:
+1. Check the [README](https://github.com/hes-so/MSE-thesis-template/blob/main/README.md) and example files.
+2. Search [existing issues](https://github.com/hes-so/MSE-thesis-template/issues).
+3. If none fit, open a new [issue](https://github.com/hes-so/MSE-thesis-template/issues/new) with:
    - A clear description of your question or problem
    - Steps to reproduce (if relevant)
    - Typst version and OS info
@@ -48,14 +48,17 @@ When reporting a bug:
   - Typst version and OS
 
 > ❗ **Security-related issues** must **not** be reported publicly.
-> Please email **<silvan.zahno@hevs.ch>** directly.
+> Please email one of the main contributor directly:
+>  - **<silvan.zahno@hevs.ch>**
+>  - **<remi.heredero@hes-so.ch>**
+>  - **<jacques.supcik@hes-so.ch>**
 
 ---
 
 ## Suggesting Enhancements
 
 Have an idea to improve the template?
-Please open an [issue](https://github.com/hei-templates/hei-synd-thesis/issues/new) and include:
+Please open an [issue](https://github.com/hes-so/MSE-thesis-template/issues/new) and include:
 
 - A short description of the feature
 - Why it’s useful (especially for students or supervisors)

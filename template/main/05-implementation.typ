@@ -3,7 +3,7 @@
 = #i18n("implementation-title", lang:option.lang) <sec:impl>
 
 #option-style(type:option.type)[
-  In the implementation phase of your bachelor thesis, you translate the design specifications into tangible, functional artifacts. This section offers insights into the practical execution of your research, detailing the steps taken to realize the proposed system. Here are some ways to enhance and elaborate on this section:
+  In the implementation phase of your thesis, you translate the design specifications into tangible, functional artifacts. This section offers insights into the practical execution of your research, detailing the steps taken to realize the proposed system. Here are some ways to enhance and elaborate on this section:
 
   - *Development Methodology*: Describe the methodology or approach employed in the development process.
   - *Prototyping and Iterative Development*: If applicable, discuss any prototyping or iterative development techniques utilized during the implementation phase.

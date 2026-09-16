@@ -3,7 +3,7 @@
 = #i18n("validation-title", lang:option.lang) <sec:validation>
 
 #option-style(type:option.type)[
-  In addition to presenting the *results of your research in relation to your research question*, it is imperative that the validation section of your bachelor's thesis adheres to certain principles to ensure clarity, coherence, and rigor. Here are some additional considerations to enhance the validation process:
+  In addition to presenting the *results of your research in relation to your research question*, it is imperative that the validation section of your thesis adheres to certain principles to ensure clarity, coherence, and rigor. Here are some additional considerations to enhance the validation process:
 
   - *Objective Description of Data*: Provide an objective and detailed description of the data used in your analysis.
   - *Utilize Graphs and Tables*: Visual aids such as graphs, charts, and tables can greatly enhance the clarity and impact of your results presentation.

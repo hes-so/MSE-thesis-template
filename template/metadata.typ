@@ -31,20 +31,20 @@
     (
       gender      : "masculin",  // ["masculin"|"feminin"|"inclusive"]
       name        : "Firstname Lastname",
-      email       : "firstname.lastname@hevs.ch",
-      degree      : "Bachelor",
-      affiliation : "HEI-Vs",
-      place       : "Sion",
-      url         : "https://synd.hevs.io",
+      email       : "firstname.lastname@master.hes-so.ch",
+      degree      : "PA",
+      affiliation : "HES-SO",
+      place       : "Lausanne",
+      url         : "https://hes-so.ch",
       signature   : image("/resources/img/signature.svg", width:3cm),
     ),
   ),
-  keywords : ("HEI-Vs", "Systems Engineering", "Infotronics", "Thesis", "Template"),
+  keywords : ("HES-SO", "MSE", "Computer Science", "Thesis", "Template"),
   version  : "v0.1.0",
 )
 
 // Thesis Data Page
-#let thesis-data-page = image("/resources/thesis-data.pdf", width: 100%) // [none|content]
+#let thesis-data-page = none // [none|content]
 // Summary Page
 #let summary-page = (
   logo: project-logo,
@@ -54,9 +54,9 @@
   ],
   //summary max. 1200 characters, with spaces.
   content: [
-   This bachelor thesis focuses on the optimization of predictive maintenance systems within industrial IoT environments. Predictive maintenance is a key aspect of modern manufacturing, enabling the anticipation of equipment failures and reducing downtime. The research begins by outlining the theoretical foundations of predictive maintenance, including sensor data acquisition, processing, and analysis. The study then introduces advanced data processing algorithms, such as machine learning techniques, to enhance prediction accuracy and reliability. A case study approach is employed, using real-world industrial data to evaluate the system’s performance. The results demonstrate significant improvements in fault detection rates and decision-making efficiency. The thesis concludes by discussing the implications for industry and providing recommendations for future development. This work aims to contribute to the advancement of smart maintenance systems, supporting industry 4.0 transformation efforts.
+   This thesis focuses on the optimization of predictive maintenance systems within industrial IoT environments. Predictive maintenance is a key aspect of modern manufacturing, enabling the anticipation of equipment failures and reducing downtime. The research begins by outlining the theoretical foundations of predictive maintenance, including sensor data acquisition, processing, and analysis. The study then introduces advanced data processing algorithms, such as machine learning techniques, to enhance prediction accuracy and reliability. A case study approach is employed, using real-world industrial data to evaluate the system’s performance. The results demonstrate significant improvements in fault detection rates and decision-making efficiency. The thesis concludes by discussing the implications for industry and providing recommendations for future development. This work aims to contribute to the advancement of smart maintenance systems, supporting industry 4.0 transformation efforts.
   ],
-  address: [HES-SO Valais Wallis • rue de l'Industrie 23 • 1950 Sion \ +41 58 606 85 11 • #link("mailto"+"info@hevs.ch")[info\@hevs.ch] • #link("www.hevs.ch")[www.hevs.ch]]
+  address: [HES-SO Master • Av. de Provence 6 • 1007 Lausanne \ + 41 58 900 00 00 • #link("mailto"+"mse@hes-so.ch")[mse\@hes-so.ch] • #link("https://www.hes-so.ch/en/master/hes-so-master/programmes/engineering-mse")[www.hes-so.ch]]
 )
 
 // Display Options for additional pages
@@ -86,20 +86,20 @@
   specialisation: none,
 )
 #if option.lang == "de" {
-  school.name = "Hochschule für Ingenieurwissenschaften Wallis, HES-SO"
-  school.shortname = "HEI-Vs"
-  school.orientation = "Systemtechnik"
-  school.specialisation = "Infotronics"
+  school.name = "Fachhochschule Westschweiz, HES-SO Master in Ingenieurwissenschaften"
+  school.shortname = "HES-SO MSE"
+  school.orientation = "Computer Science"
+  school.specialisation = "Embedded"
 } else if option.lang == "fr" {
-  school.name = "Haute École d'Ingénierie du Valais, HES-SO"
-  school.shortname = "HEI-Vs"
-  school.orientation = "Systèmes industriels"
-  school.specialisation = "Infotronics"
+  school.name = "Haute école spécialisée de Suisse occidentale, HES-SO Master en Science de l'Ingénierie"
+  school.shortname = "HES-SO MSE"
+  school.orientation = "Computer Science"
+  school.specialisation = "Embarqué"
 } else {
-  school.name = "University of Applied Sciences Western Switzerland, HES-SO Valais Wallis"
-  school.shortname = "HEI-Vs"
-  school.orientation = "Systems Engineering"
-  school.specialisation = "Infotronics"
+  school.name = "University of Applied Sciences Western Switzerland, HES-SO Master of Science in Engineering"
+  school.shortname = "HES-SO MSE"
+  school.orientation = "Computer Science"
+  school.specialisation = "Embedded"
 }
 
 #let date = (

@@ -1,6 +1,6 @@
 //
 // Description: Custom pages for the thesis template
-// Author     : Silvan Zahno
+// Base on the work of Silvan Zahno (HEI-Vs)
 //
 #import "helpers.typ": *
 

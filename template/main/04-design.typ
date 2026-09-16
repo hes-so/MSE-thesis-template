@@ -3,7 +3,7 @@
 = #i18n("design-title", lang:option.lang) <sec:design>
 
 #option-style(type:option.type)[
-  In the design section of your bachelor thesis, you have the opportunity to provide a detailed blueprint of the system you intend to develop or analyze. This section serves as the foundation upon which your implementation will be built. Here's how you can enrich and expand upon this section:
+  In the design section of your thesis, you have the opportunity to provide a detailed blueprint of the system you intend to develop or analyze. This section serves as the foundation upon which your implementation will be built. Here's how you can enrich and expand upon this section:
 
   - *System Overview*: Begin by providing a comprehensive overview of the system under consideration.
   - *Requirements Specification*: Outline the specific requirements that your system must fulfill.

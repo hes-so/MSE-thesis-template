@@ -1,6 +1,6 @@
 //
-// Description: HEVS Thesis Typst Template
-// Author     : Silvan Zahno
+// Description: MSE Thesis Typst Template
+// Base on the work of Silvan Zahno (HEI-Vs) 
 //
 #import "helpers.typ": *
 #import "pages-thesis.typ": page-title-thesis, summary, page-reportinfo, page-pdf
@@ -11,8 +11,8 @@
     name        : none,
     email       : none,
     degree      : none,
-    affiliation : "HEI-Vs",
-    place       : "Sion",
+    affiliation : "HES-SO",
+    place       : "Lausanne",
     url         : none,
   ),
   required: ("name",)
@@ -22,7 +22,7 @@
   defaults: (
     name: none,
     email: none,
-    affiliation: "HEI-Vs",
+    affiliation: "HES-SO",
   ),
   required: ("name",)
 )
@@ -60,13 +60,13 @@
         name        : "Firstname Lastname",
         email       : "firstname.lastname@hevs.ch",
         degree      : "Bachelor",
-        affiliation : "HEI-Vs",
-        place       : "Sion",
-        url         : "https://synd.hevs.io",
+        affiliation : "HES-SO",
+        place       : "Lausanne",
+        url         : "https://hes-so.ch",
         signature   : none,
       ),
     ),
-    keywords : ("HEI-Vs", "Systems Engineering", "Infotronics", "Thesis", "Template"),
+    keywords : ("HES-SO", "MSE", "Computer Science", "Thesis", "Template"),
     version  : "v0.1.0",
   ),
   thesis-data-page: none,
