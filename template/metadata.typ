@@ -1,4 +1,4 @@
-#import "@preview/hes-so-package:0.1.0": *
+#import "@preview/hes-so-package:0.0.4": *
 #import "@preview/mse-thesis-template:0.0.1": *
 
 //-------------------------------------

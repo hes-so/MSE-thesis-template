@@ -1,8 +1,8 @@
 //
 // Description: MSE Thesis Typst Template
-// Base on the work of Silvan Zahno (HEI-Vs) 
+// Base on the work of Silvan Zahno (HEI-Vs)
 //
-#import "@preview/hes-so-package:0.1.0": *
+#import "@preview/hes-so-package:0.0.4": *
 #import "pages-thesis.typ": page-title-thesis, summary, page-reportinfo, page-pdf
 
 #let sanitize-author = apply-dict-defaults.with(
