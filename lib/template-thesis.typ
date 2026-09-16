@@ -2,7 +2,7 @@
 // Description: MSE Thesis Typst Template
 // Base on the work of Silvan Zahno (HEI-Vs) 
 //
-#import "helpers.typ": *
+#import "@preview/hes-so-package:0.1.0": *
 #import "pages-thesis.typ": page-title-thesis, summary, page-reportinfo, page-pdf
 
 #let sanitize-author = apply-dict-defaults.with(
@@ -244,7 +244,7 @@
     set block(above: 1.2em, below: 1.2em)
     if it.numbering != none {
       let num = numbering(it.numbering, ..counter(heading).at(it.location()))
-      let prefix = num + h(0.5em) + text(code-border)[|] + h(0.5em)
+      let prefix = num + h(0.5em) + text(colors.code.border)[|] + h(0.5em)
       unshift-prefix(prefix, it.body)
     } else {
       it
@@ -262,7 +262,7 @@
 
   // link color
   //show link: it => text(fill: blue, underline(it))
-  show link: it => text(fill: hei-blue, it)
+  show link: it => text(fill: colors.hei.blue, it)
 
   // code blocks
   show raw: set text(font: (fonts.mono), fallback: true)
@@ -276,7 +276,7 @@
       width: 100%,
       inset: 10pt,
       radius: 4pt,
-      stroke: 0.1pt + code-border,
+      stroke: 0.1pt + colors.code.border,
       it,
     )
   }
@@ -284,11 +284,11 @@
   codly(
     languages: codly-languages,
     zebra-fill: none,
-    stroke: 0.1pt + code-border,
+    stroke: 0.1pt + colors.code.border,
     radius: 4pt,
     number-format: (number) => text(luma(210), size: 7pt, [#h(1em)#number]),
     inset: (left: 0em, rest: 0.32em),
-    fill: code-bg,
+    fill: colors.code.bg,
   )
 
   // Title page

@@ -2,7 +2,7 @@
 // Description: Custom pages for the thesis template
 // Base on the work of Silvan Zahno (HEI-Vs)
 //
-#import "helpers.typ": *
+#import "@preview/hes-so-package:0.1.0": *
 
 #let format-email(email) = {
   if email == none {

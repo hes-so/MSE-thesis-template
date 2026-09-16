@@ -4,14 +4,14 @@
 
 <h1 align="center">
   <br>
-  <img src="https://github.com/hei-templates/hei-synd-logos/blob/5a15ff1e95e012e53c34580554a4834cdec05d01/hei-en.svg" alt="HEI-Vs Logo" width="350">
+  <img src="https://github.com/hes-so/HES-SO-package/blob/5f0a84ddde36e95f2715df3551e2bfa9ce389691/src/img/logos/hesso-logo.svg" alt="HES-SO Logo" width="350">
   <br>
       HES-SO - Master Typst package
   <br>
 </h1>
 <div align="center">
   <br>
-  <img src="https://github.com/hei-templates/hei-synd-logos/blob/5a15ff1e95e012e53c34580554a4834cdec05d01/synd.svg" alt="Industrial Systems Logo" width="350">
+  <img src="https://github.com/hes-so/HES-SO-package/blob/5f0a84ddde36e95f2715df3551e2bfa9ce389691/src/img/logos/mse.svg" alt="MSE Logo" width="350">
   <br>
 </div>
 

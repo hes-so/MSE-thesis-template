@@ -110,14 +110,10 @@
 
 #let logos = (
   main: project-logo,
-  topleft: if option.lang == "fr" or option.lang == "de" {
-    image("/resources/img/logos/hei-defr.svg", width: 6cm)
-  } else {
-    image("/resources/img/logos/hei-en.svg", width: 6cm)
-  },
-  topright: image("/resources/img/logos/hesso-logo.svg", width: 4cm),
-  bottomleft: image("/resources/img/logos/hevs-pictogram.svg", width: 4cm),
-  bottomright: image("/resources/img/logos/swiss_universities-valais-excellence-logo.svg", width: 5cm),
+  topleft: image(logos.mse, width: 6cm),
+  topright: image(logos.hesso-full, width: 4cm),
+  bottomleft: none,
+  bottomright: image(logos.swissuniversities, width: 5cm),
 )
 
 //-------------------------------------

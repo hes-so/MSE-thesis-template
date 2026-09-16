@@ -35,7 +35,7 @@
 
 == Basic markup
 
-Typst lets you create bold, italic, or monospaced text with ease. You can also sprinkle in equations like $e^(i pi) + 1 = 0$ or even inline code like #raw(lang:"rust", "fn main() { println!(\"Hello, World!\") }"). And because life is better in color: #text(fill:hei-pink)[pink], #text(fill:hei-blue)[blue], #text(fill:hei-yellow)[yellow], #text(fill:hei-orange)[orange], #text(fill:hei-green)[green], and more! #text(fill:color-fire)[Boldly colorize!]
+Typst lets you create bold, italic, or monospaced text with ease. You can also sprinkle in equations like $e^(i pi) + 1 = 0$ or even inline code like #raw(lang:"rust", "fn main() { println!(\"Hello, World!\") }"). And because life is better in color: #text(fill:colors.hei.pink)[pink], #text(fill:colors.hei.blue)[blue], #text(fill:colors.hei.yellow)[yellow], #text(fill:colors.hei.orange)[orange], #text(fill:colors.hei.green)[green], and more! #text(fill:colors.icon.fire)[Boldly colorize!]
 
 You can also write numbered or unnumbered lists:
 - First item
