@@ -195,6 +195,43 @@ open file_name=doc_name:
   just pdf {{file_name}} draft fr
   just pdf {{file_name}} final fr
 
+# generate thumbnail.png (first page of thesis.typ at 300 DPI)
+# requires: typst, pdftoppm (poppler), magick (ImageMagick)
+thumbnail file_name=doc_name lang=lang:
+  #!/usr/bin/env sh
+  echo "--------------------------------------------------"
+  echo "-- Generate thumbnail.png from page 1 of {{file_name}}.pdf"
+  echo "--"
+  typst c {{template_dir}}/{{file_name}}.typ --input type=final --input lang={{lang}}
+  tmp_dir=$(mktemp -d)
+  pdftoppm -f 1 -l 1 -r 300 -png -singlefile {{template_dir}}/{{file_name}}.pdf "$tmp_dir/thumb"
+  mv "$tmp_dir/thumb.png" {{project_dir}}/thumbnail.png
+  rm -rf "$tmp_dir"
+  just clean
+
+# generate sample.png (3-column montage of selected pages of thesis.typ at 300 DPI)
+# requires: typst, pdftoppm (poppler), magick (ImageMagick)
+# pages: space-separated list of page numbers, e.g. "1 3 4 5 8 9 17"
+sample file_name=doc_name pages="1 2 3 4 7 8 9 11 21" lang=lang:
+  #!/usr/bin/env sh
+  echo "--------------------------------------------------"
+  echo "-- Generate sample.png from pages [{{pages}}] of {{file_name}}.pdf"
+  echo "--"
+  typst c {{template_dir}}/{{file_name}}.typ --input type=final --input lang={{lang}}
+  tmp_dir=$(mktemp -d)
+  for page in {{pages}}; do
+    pdftoppm -f $page -l $page -r 300 -png -singlefile \
+      {{template_dir}}/{{file_name}}.pdf "$tmp_dir/page-$(printf '%03d' $page)"
+  done
+  magick montage "$tmp_dir"/page-*.png -geometry +4+4 -tile 3x {{project_dir}}/sample.png
+  rm -rf "$tmp_dir"
+  just clean
+
+# generate both thumbnail.png and sample.png
+@screenshots:
+  just thumbnail
+  just sample
+
 # cleanup intermediate files
 [linux]
 [macos]
