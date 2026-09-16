@@ -96,6 +96,7 @@ To pass the CI checks, **update the version number consistently** in these files
 | `README.md`    | Example usage snippet with latest version                        |
 | `justfile`     | Update `project_tag` (for `git-cliff` and Typst release tooling) |
 | `metadata.typ` | Internal version used for imports                                |
+| `lib.typ`      | Library functions and components                                 |
 
 ### 🚀 Release Process
 

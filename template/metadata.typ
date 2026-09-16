@@ -1,4 +1,4 @@
-#import "@preview/hei-synd-thesis:0.4.0": *
+#import "@preview/mse-thesis-template:0.0.1": *
 
 //-------------------------------------
 // Document options

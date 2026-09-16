@@ -21,11 +21,11 @@ This is a Typst template for a PA, PI or TM at the [MSE HES-SO](https://www.hes-
 
 ## Using the template
 
-1. In the `Typst` Univers select the `hei-synd-thesis` template. Locally you can use the Typst CLI to initialise the project:
+1. In the `Typst` Univers select the `mse-thesis-template` template. Locally you can use the Typst CLI to initialise the project:
 
    ```bash
    # from the typst universe
-   typst init @preview/hei-synd-thesis:0.4.0
+   typst init @preview/mse-thesis-template:0.0.1
    ```
 
 2. Fill in the metadata in the `metadata.typ` file.
