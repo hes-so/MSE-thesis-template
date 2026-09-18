@@ -3,4 +3,4 @@
 #import "helpers.typ": *
 
 #let name = "mse-thesis-template"
-#let version = std.version(0,0,1)
+#let version = std.version(0,0,2)

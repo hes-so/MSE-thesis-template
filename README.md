@@ -25,7 +25,7 @@ This is a Typst template for a PA, PI or TM at the [MSE HES-SO](https://www.hes-
 
    ```bash
    # from the typst universe
-   typst init @preview/mse-thesis-template:0.0.1
+   typst init @preview/mse-thesis-template:0.0.2
    ```
 
 2. Fill in the metadata in the `metadata.typ` file.
