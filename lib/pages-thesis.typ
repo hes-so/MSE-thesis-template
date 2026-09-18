@@ -55,6 +55,7 @@
     bottomleft: none,
     bottomright: none,
   ),
+  text-color: none,
   extra-content-top: none,
   extra-content-bottom: none,
 ) = {
@@ -66,6 +67,8 @@
       rest: 3.5cm
     )
   )
+
+  let text-color = if text-color != none {text-color} else {colors.black}
   //-------------------------------------
   // Page content
   //
@@ -99,7 +102,7 @@
       if school.orientation != none or school.specialisation != none {
         align(center, text(
           size: larger,
-          fill: colors.hes-so.blue,
+          fill: text-color,
           study_field
         ))
         v(1em)
@@ -111,24 +114,46 @@
       extra-content-top
     }
 
-    // BACHELOR'S THESIS / Midterm Report
-    if template == "thesis" {
-      align(center, text(size: huge,
-        [*#i18n("bachelor-title", lang: lang)*]
-      ))
-      v(1em)
-    } else if template == "midterm"{
-      align(center, text(size: huge,
-        [*#i18n("midterm-title", lang: lang)*]
+    // Title
+    let _type-report-title = if template == "bachelor" {
+      i18n("bachelor-title", lang: lang)
+    } else if template == "midterm" {
+      i18n("midterm-title", lang: lang)
+    } else if template == "pa" {
+      i18n("pa-title", lang: lang)
+    } else if template == "pi" {
+      i18n("pi-title", lang: lang)
+    } else if template == "master" {
+      i18n("tm-title", lang: lang)
+    } else {
+      none
+    }
+    if _type-report-title != none {
+      align(center, text(
+        size: huge,
+        fill: text-color,
+        [*#_type-report-title*]
       ))
       v(1em)
     }
 
     // DIPLOMA YEAR
-    align(center, text(size: huge,
-      [*#i18n("diploma", lang: lang) #date.display("[year]")*]
-    ))
-    v(1em)
+    if template == "bachelor" {
+      align(center, text(
+        size: huge,
+        fill: text-color,
+        [*#i18n("diploma", lang: lang) #date.display("[year]")*]
+      ))
+      v(1em)
+    } else if template == "master" {
+      let date-1 = date - duration(days: 365)
+      align(center, text(
+        size: huge,
+        fill: text-color,
+        [*#i18n("diploma", lang: lang) #date-1.display("[year]")-#date.display("[year]")*]
+      ))
+      v(1em)
+    }
 
     // AUTHORs
     align(center, text(size: large, {
@@ -144,8 +169,9 @@
     }))
 
     titlebox(
-      title: title,
-      subtitle: subtitle,
+      title: text(title, fill: text-color),
+      subtitle: text(subtitle, fill: text-color),
+      linecolor: text-color,
     )
 
     if is-confidential {

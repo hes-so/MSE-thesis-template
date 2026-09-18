@@ -25,6 +25,7 @@
   tableof: tableof,
   logos: logos,
   fonts: fonts,
+  title-page-text-color: colors.hes-so.blue,
 )
 
 //-------------------------------------

@@ -11,6 +11,9 @@
 
     "bachelor-title": "Bachelor's Thesis",
     "midterm-title": "Midterm Report",
+    "pa-title": "PA Report",
+    "pi-title": "PI Report",
+    "tm-title": "Master's Thesis",
     "diploma": "Diploma",
     "professor": "Professor",
     "expert": "Expert",
@@ -50,6 +53,9 @@
 
     "bachelor-title": "Thèse de Bachelor",
     "midterm-title": "Rapport intermédiaire",
+    "pa-title": "Rapport de PA",
+    "pi-title": "Rapport de PI",
+    "tm-title": "Thèse de Master",
     "diploma": "Diplôme",
     "professor": "Professeur",
     "expert": "Expert",
@@ -89,6 +95,9 @@
 
     "bachelor-title": "Bachelorarbeit",
     "midterm-title": "Zwischenbericht",
+    "pa-title": "PA-Bericht",
+    "pi-title": "PI-Bericht",
+    "tm-title": "Masterarbeit",
     "diploma": "Diploma",
     "professor": "Professor",
     "expert": "Experte",

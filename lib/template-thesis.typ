@@ -112,6 +112,7 @@
     mono: "DejaVu Sans Mono",
     math: "New Computer Modern Math"
   ),
+  title-page-text-color: none,
   body
 ) = {
   // Sanitize inputs
@@ -306,6 +307,7 @@
       professor: professor,
       expert: expert,
       logos: logos,
+      text-color: title-page-text-color,
       extra-content-top: title-extra-content-top,
       extra-content-bottom: title-extra-content-bottom,
     )

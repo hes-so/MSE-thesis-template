@@ -7,7 +7,7 @@
 #let option = (
   type : sys.inputs.at("type", default:"draft"),    // [draft|final]
   lang : sys.inputs.at("lang", default:"en"),       // [en|fr|de]
-  template    : "thesis",   // [thesis/midterm]
+  template  : "master",   // [pa|pi|master|bachelor|midterm]
 )
 //-------------------------------------
 // Optional generate titlepage image
