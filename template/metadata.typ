@@ -28,7 +28,7 @@
 #let doc= (
   title    : "Thesis Template",
   subtitle : "Longer Subtitle",
-  author: (
+  author: ( // In case of multi author, add one or more author with at least the name field.
     (
       gender      : "masculin",  // ["masculin"|"feminin"|"inclusive"]
       name        : "Firstname Lastname",
