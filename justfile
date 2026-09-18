@@ -212,7 +212,7 @@ thumbnail file_name=doc_name lang=lang:
 # generate sample.png (3-column montage of selected pages of thesis.typ at 300 DPI)
 # requires: typst, pdftoppm (poppler), magick (ImageMagick)
 # pages: space-separated list of page numbers, e.g. "1 3 4 5 8 9 17"
-sample file_name=doc_name pages="1 2 3 4 7 8 9 11 21" lang=lang:
+sample file_name=doc_name pages="1 2 3 4 7 8 10 12 22" lang=lang:
   #!/usr/bin/env sh
   echo "--------------------------------------------------"
   echo "-- Generate sample.png from pages [{{pages}}] of {{file_name}}.pdf"

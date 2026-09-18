@@ -28,9 +28,15 @@
 #infobox()[Welcome to the template’s introductory chapter! Instead of boring you with lorem ipsum, here’s a quick guide to what you can do in Typst and, more specifically, in this template.
 
   Need more? Check out the Guide to Typst (
-    #link("https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-en_minimal.pdf")[EN] #footnote[https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-en_minimal.pdf] $dot$
-    #link("https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-fr_minimal.pdf")[FR] #footnote[https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-fr_minimal.pdf] $dot$
-    #link("https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-de_minimal.pdf")[DE] #footnote[https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-de_minimal.pdf] ).
+    #link("https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-en_minimal.pdf")[EN]
+    // #footnote[https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-en_minimal.pdf]
+    $dot$
+    #link("https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-fr_minimal.pdf")[FR]
+    // #footnote[https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-fr_minimal.pdf]
+    $dot$
+    #link("https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-de_minimal.pdf")[DE]
+    // #footnote[https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-de_minimal.pdf]
+    ).
 ]
 
 == Basic markup

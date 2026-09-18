@@ -327,7 +327,7 @@
   }
 
   // Summary
-  if option.template == "thesis" and summary-page != none and display.summary {
+  if (option.template == "bachelor" or option.template == "master") and summary-page != none and display.summary {
     pagebreak()
     summary(
       title: doc.title,
