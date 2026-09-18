@@ -103,7 +103,7 @@
   school.specialisation = "Embedded"
 }
 
-#let is-confidential = true // [true|false] display confidential notice on title page
+#let is-confidential = false // [true|false] display confidential notice on title page
 
 #let date = (
   submission: datetime(year: 2026, month: 8, day: 14),
