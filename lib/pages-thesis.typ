@@ -2,7 +2,7 @@
 // Description: Custom pages for the thesis template
 // Base on the work of Silvan Zahno (HEI-Vs)
 //
-#import "@preview/hes-so-package:0.0.5": *
+#import "helpers.typ": *
 
 #let format-email(email) = {
   if email == none {
@@ -74,12 +74,6 @@
     if school != none {
       //v(0.5fr)
       // Degree Programme
-      if school.orientation != none {
-        align(center, text(size: larger,
-          i18n("degree-programme", lang: lang)
-        ))
-        v(1em)
-      }
 
       // Orientation
       if school.orientation != none {
@@ -105,7 +99,7 @@
     // BACHELOR'S THESIS / Midterm Report
     if template == "thesis" {
       align(center, text(size: huge,
-        [*#i18n("thesis-title", lang: lang)*]
+        [*#i18n("bachelor-title", lang: lang)*]
       ))
       v(1em)
     } else if template == "midterm"{
@@ -280,7 +274,7 @@
       #align(center)[
         #heading(level: 3, numbering: none, outlined: false)[
           #text(15pt)[
-            #i18n("thesis-title", lang: lang)\ | #h(0.3cm) #year #h(0.3cm) |
+            #i18n("bachelor-title", lang: lang)\ | #h(0.3cm) #year #h(0.3cm) |
           ]
         ]
       ]
