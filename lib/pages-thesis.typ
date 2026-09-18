@@ -76,20 +76,35 @@
       // Degree Programme
 
       // Orientation
-      if school.orientation != none {
-        align(center, text(size: larger,
-          school.orientation
+      let study_field = if school.orientation != none {
+        school.orientation
+      } else {
+        ""
+      }
+
+      // Separator
+      study_field = if school.orientation != none and school.specialisation != none {
+        study_field + " / "
+      } else {
+        study_field
+      }
+
+      // Specialisation
+      study_field = if school.specialisation != none {
+        study_field + school.specialisation
+      } else {
+        study_field
+      }
+
+      if school.orientation != none or school.specialisation != none {
+        align(center, text(
+          size: larger,
+          fill: colors.hes-so.blue,
+          study_field
         ))
         v(1em)
       }
 
-      // Specialisation
-      if school.specialisation != none {
-        align(center, text(size: large,
-          [#i18n("major", lang: lang) #school.specialisation]
-        ))
-        v(2em)
-      }
     }
 
     if extra-content-top != none {
