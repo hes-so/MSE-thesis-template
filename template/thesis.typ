@@ -20,16 +20,18 @@
   expert: expert,
   // partner: expert,
   school: school,
+  is-confidential: is-confidential,
   date: date,
   tableof: tableof,
   logos: logos,
   fonts: fonts,
+  title-page-text-color: colors.hes-so.blue,
 )
 
 //-------------------------------------
 // Content
 //
-#include("/main/00-acknowledgements.typ")
+#include "/main/00-acknowledgements.typ"
 #include "/main/01-abstract.typ"
 #include "/main/02-introduction.typ"
 #include "/main/03-analysis.typ"

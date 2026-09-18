@@ -16,20 +16,35 @@ jobs:
       matrix: ${{ fromJSON(inputs.build_matrix) }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Typst
-        uses: typst-community/setup-typst@v4
+        uses: typst-community/setup-typst@v5
+
+      - name: Install dependencies # Tempory because HES-SO package is not yet in the typst registry
+        # To use it with Act, we have to specify another base image. To do that we can use:
+        # -P ubuntu-latest=ghcr.io/catthehacker/ubuntu:rust-latest
+        run: |
+          if [ "${ACT}" = "true" ]; then
+            cargo binstall --no-confirm utpm
+          else
+            cargo install utpm
+          fi
+          utpm pkg install -n preview https://github.com/hes-so/HES-SO-package
 
       - name: Install Package
         env:
           RELEASE_VERSION: ${{ inputs.release_version }}
         run: |
-          mkdir -p ~/.cache/typst/packages/preview/hei-synd-thesis/${{ env.RELEASE_VERSION }}
-          cp -r ./ ~/.cache/typst/packages/preview/hei-synd-thesis/${{ env.RELEASE_VERSION }}
+          mkdir -p ~/.cache/typst/packages/preview/mse-thesis-template/${{ env.RELEASE_VERSION }}
+          cp -r ./ ~/.cache/typst/packages/preview/mse-thesis-template/${{ env.RELEASE_VERSION }}
 
       - name: Build Thesis - ${{ matrix.lang }}/${{ matrix.type }}
-        run: typst compile template/thesis.typ template/thesis-${{ inputs.release_version }}-${{ matrix.lang }}_${{ matrix.type }}.pdf --input lang=${{ matrix.lang }} --input type=${{ matrix.type }}
+        run: |
+          typst compile template/thesis.typ \
+            template/thesis-${{ inputs.release_version }}-${{ matrix.lang }}_${{ matrix.type }}.pdf \
+            --input lang=${{ matrix.lang }} \
+            --input type=${{ matrix.type }}
 
       - name: Upload PDF artifact
         if: ${{ !env.ACT }}

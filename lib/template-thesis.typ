@@ -1,6 +1,6 @@
 //
-// Description: HEVS Thesis Typst Template
-// Author     : Silvan Zahno
+// Description: MSE Thesis Typst Template
+// Base on the work of Silvan Zahno (HEI-Vs)
 //
 #import "helpers.typ": *
 #import "pages-thesis.typ": page-title-thesis, summary, page-reportinfo, page-pdf
@@ -11,8 +11,8 @@
     name        : none,
     email       : none,
     degree      : none,
-    affiliation : "HEI-Vs",
-    place       : "Sion",
+    affiliation : "HES-SO",
+    place       : "Lausanne",
     url         : none,
   ),
   required: ("name",)
@@ -22,7 +22,7 @@
   defaults: (
     name: none,
     email: none,
-    affiliation: "HEI-Vs",
+    affiliation: "HES-SO",
   ),
   required: ("name",)
 )
@@ -60,13 +60,13 @@
         name        : "Firstname Lastname",
         email       : "firstname.lastname@hevs.ch",
         degree      : "Bachelor",
-        affiliation : "HEI-Vs",
-        place       : "Sion",
-        url         : "https://synd.hevs.io",
+        affiliation : "HES-SO",
+        place       : "Lausanne",
+        url         : "https://hes-so.ch",
         signature   : none,
       ),
     ),
-    keywords : ("HEI-Vs", "Systems Engineering", "Infotronics", "Thesis", "Template"),
+    keywords : ("HES-SO", "MSE", "Computer Science", "Thesis", "Template"),
     version  : "v0.1.0",
   ),
   thesis-data-page: none,
@@ -84,6 +84,7 @@
   expert: (),
   partner: (),
   school: none,
+  is-confidential: false,
   date: (
     submission: datetime.today(),
     mid-term-submission: datetime.today(),
@@ -111,6 +112,7 @@
     mono: "DejaVu Sans Mono",
     math: "New Computer Modern Math"
   ),
+  title-page-text-color: none,
   body
 ) = {
   // Sanitize inputs
@@ -244,7 +246,7 @@
     set block(above: 1.2em, below: 1.2em)
     if it.numbering != none {
       let num = numbering(it.numbering, ..counter(heading).at(it.location()))
-      let prefix = num + h(0.5em) + text(code-border)[|] + h(0.5em)
+      let prefix = num + h(0.5em) + text(colors.code.border)[|] + h(0.5em)
       unshift-prefix(prefix, it.body)
     } else {
       it
@@ -262,7 +264,7 @@
 
   // link color
   //show link: it => text(fill: blue, underline(it))
-  show link: it => text(fill: hei-blue, it)
+  show link: it => text(fill: colors.hei.blue, it)
 
   // code blocks
   show raw: set text(font: (fonts.mono), fallback: true)
@@ -276,7 +278,7 @@
       width: 100%,
       inset: 10pt,
       radius: 4pt,
-      stroke: 0.1pt + code-border,
+      stroke: 0.1pt + colors.code.border,
       it,
     )
   }
@@ -284,11 +286,11 @@
   codly(
     languages: codly-languages,
     zebra-fill: none,
-    stroke: 0.1pt + code-border,
+    stroke: 0.1pt + colors.code.border,
     radius: 4pt,
     number-format: (number) => text(luma(210), size: 7pt, [#h(1em)#number]),
     inset: (left: 0em, rest: 0.32em),
-    fill: code-bg,
+    fill: colors.code.bg,
   )
 
   // Title page
@@ -296,6 +298,7 @@
     page-title-thesis(
       title: doc.title,
       subtitle: doc.subtitle,
+      is-confidential: is-confidential,
       date: date.submission,
       lang: option.lang,
       template: option.template,
@@ -304,6 +307,7 @@
       professor: professor,
       expert: expert,
       logos: logos,
+      text-color: title-page-text-color,
       extra-content-top: title-extra-content-top,
       extra-content-bottom: title-extra-content-bottom,
     )
@@ -323,7 +327,7 @@
   }
 
   // Summary
-  if option.template == "thesis" and summary-page != none and display.summary {
+  if (option.template == "bachelor" or option.template == "master") and summary-page != none and display.summary {
     pagebreak()
     summary(
       title: doc.title,

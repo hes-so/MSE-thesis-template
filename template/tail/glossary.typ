@@ -2,21 +2,15 @@
 
 #let entry-list = (
   (
-    key: "hei",
-    short: "HEI",
-    long: "Haute École d'Ingénierie",
+    key: "mse",
+    short: "MSE",
+    long: "Master of Science in Engineering",
     group: "University"
   ),
   (
-    key: "synd",
-    short: "SYND",
-    long: "Systems Engineering",
-    group: "University"
-  ),
-  (
-    key: "it",
-    short: "IT",
-    long: "Infotronics",
+    key: "cs",
+    short: "CS",
+    long: "Computer Science",
     group: "University"
   ),
   (

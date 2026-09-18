@@ -1,31 +1,31 @@
-![GitHub Repo stars](https://img.shields.io/github/stars/hei-templates/hei-synd-thesis)
-![GitHub Release](https://img.shields.io/github/v/release/hei-templates/hei-synd-thesis)
+![GitHub Repo stars](https://img.shields.io/github/stars/hes-so/MSE-thesis-template)
+![GitHub Release](https://img.shields.io/github/v/release/hes-so/MSE-thesis-template)
 ![](https://tianji.zahno.dev/telemetry/clnzoxcy10001vy2ohi4obbi0/cm7hhbe65003cru047eqabmpg.gif)
 
 <h1 align="center">
   <br>
-  <img src="https://github.com/hei-templates/hei-synd-logos/blob/5a15ff1e95e012e53c34580554a4834cdec05d01/hei-en.svg" alt="HEI-Vs Logo" width="350">
+  <img src="https://github.com/hes-so/HES-SO-package/blob/5f0a84ddde36e95f2715df3551e2bfa9ce389691/src/img/logos/hesso-logo.svg" alt="HES-SO Logo" width="350">
   <br>
-  HEI-Vs Engineering School - Systems Engineering
+      HES-SO - Master Typst package
   <br>
 </h1>
 <div align="center">
   <br>
-  <img src="https://github.com/hei-templates/hei-synd-logos/blob/5a15ff1e95e012e53c34580554a4834cdec05d01/synd.svg" alt="Industrial Systems Logo" width="350">
+  <img src="https://github.com/hes-so/HES-SO-package/blob/5f0a84ddde36e95f2715df3551e2bfa9ce389691/src/img/logos/mse.svg" alt="MSE Logo" width="350">
   <br>
 </div>
 
-This is the official template for a Bachelorthesis at the [HEI-Vs Engineering School](https://synd.hevs.io) in Sion, Switzerland. More templates can the found in our [GitHub organization](https://github.com/hei-templates)
+This is a Typst template for a PA, PI or TM at the [MSE HES-SO](https://www.hes-so.ch/master/hes-so-master/formations/engineering). More templates can the found in our [GitHub organization](https://github.com/hes-so)
 
-![Image of hei-synd-thesis document](https://github.com/hei-templates/hei-synd-thesis/blob/a1c7d345ec2d09e4841456502c76dd5680a85b9f/sample.png)
+![Image of MSE-thesis-template document](./sample.png)
 
 ## Using the template
 
-1. In the `Typst` Univers select the `hei-synd-thesis` template. Locally you can use the Typst CLI to initialise the project:
+1. In the `Typst` Univers select the `mse-thesis-template` template. Locally you can use the Typst CLI to initialise the project:
 
    ```bash
    # from the typst universe
-   typst init @preview/hei-synd-thesis:0.4.0
+   typst init @preview/mse-thesis-template:0.0.2
    ```
 
 2. Fill in the metadata in the `metadata.typ` file.
@@ -160,12 +160,15 @@ typst compile thesis.typ --input type="draft" --input lang="de"
 
 ## Help
 
-If you need help writting your document look at the [Typst documentation](https://typst.app/docs/) or if ou need more help with the template specifics look at the document [Guide-to-Typst](https://github.com/hei-templates/hei-synd-thesis/blob/c218181f4f6a12938f5c0d7ef939d7075fcc4fff/guide-to-typst.pdf).
+If you need help writting your document look at the [Typst documentation](https://typst.app/docs/) or if ou need more help with the template specifics look at the document Guide to Typst:
+[EN](https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-en_minimal.pdf)
+[DE](https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-de_minimal.pdf)
+[FR](https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-fr_minimal.pdf).
 IF you need help writing your thesis look at the document [Guide-to-Thesis](https://github.com/hei-templates/hei-synd-thesis/blob/c218181f4f6a12938f5c0d7ef939d7075fcc4fff/guide-to-thesis.pdf)
 
 ## Contributing
 
-All notable information about contributing to this project can be found in the [CONTRIBUTING.md](https://github.com/hei-templates/hei-synd-thesis/blob/main/CONTRIBUTING.md) file.
+All notable information about contributing to this project can be found in the [CONTRIBUTING.md](https://github.com/hes-so/MSE-thesis-template/blob/main/CONTRIBUTING.md) file.
 
 ## Issues and Support
 
@@ -173,13 +176,12 @@ If you encounter any issues or have questions regarding the course or any of the
 
 ## Changelog
 
-All notable changes to this project are documented in the [CHANGELOG.md](https://github.com/hei-templates/hei-synd-thesis/blob/main/CHANGELOG.md) file.
+All notable changes to this project are documented in the [CHANGELOG.md](https://github.com/hes-so/MSE-thesis-template/blob/main/CHANGELOG.md) file.
 
 ## Find us on
 
-[hevs.ch](https://synd.hevs.io) &nbsp;&middot;&nbsp;
-LinkedIn [HEI-Vs](https://www.linkedin.com/showcase/school-of-engineering-valais-wallis/) &nbsp;&middot;&nbsp;
-LinkedIn [HES-SO Valais-Wallis](https://www.linkedin.com/groups/104343/) &nbsp;&middot;&nbsp;
-Youtube [HES-SO Valais-Wallis](https://www.youtube.com/user/HESSOVS)
-Twitter [@hessovalais](https://twitter.com/hessovalais) &nbsp;&middot;&nbsp;
-Facebook [@hessovalais](https://www.facebook.com/hessovalais) &nbsp;&middot;&nbsp;
+[hes-so.ch](https://www.hes-so.ch/accueil) &nbsp;&middot;&nbsp;
+LinkedIn [HES-SO](https://www.linkedin.com/school/university-of-applied-sciences-western-switzerland) &nbsp;&middot;&nbsp;
+Youtube [HES-SO](https://www.youtube.com/hessofilms) &nbsp;&middot;&nbsp;
+Instagram [@hessoeducation](https://www.instagram.com/hessoeducation/) &nbsp;&middot;&nbsp;
+TikTok [@hessoeducation](https://www.tiktok.com/@hessoeducation)

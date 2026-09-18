@@ -1,6 +1,6 @@
 //
 // Description: Custom pages for the thesis template
-// Author     : Silvan Zahno
+// Base on the work of Silvan Zahno (HEI-Vs)
 //
 #import "helpers.typ": *
 
@@ -27,6 +27,7 @@
   title: none,
   subtitle: none,
   template: "thesis",
+  is-confidential: false,
   date: datetime.today(),
   lang: "en",
   school: (
@@ -54,6 +55,7 @@
     bottomleft: none,
     bottomright: none,
   ),
+  text-color: none,
   extra-content-top: none,
   extra-content-bottom: none,
 ) = {
@@ -65,6 +67,8 @@
       rest: 3.5cm
     )
   )
+
+  let text-color = if text-color != none {text-color} else {colors.black}
   //-------------------------------------
   // Page content
   //
@@ -73,52 +77,83 @@
     if school != none {
       //v(0.5fr)
       // Degree Programme
-      if school.orientation != none {
-        align(center, text(size: larger,
-          i18n("degree-programme", lang: lang)
-        ))
-        v(1em)
-      }
 
       // Orientation
-      if school.orientation != none {
-        align(center, text(size: larger,
-          school.orientation
-        ))
-        v(1em)
+      let study_field = if school.orientation != none {
+        school.orientation
+      } else {
+        ""
+      }
+
+      // Separator
+      study_field = if school.orientation != none and school.specialisation != none {
+        study_field + " / "
+      } else {
+        study_field
       }
 
       // Specialisation
-      if school.specialisation != none {
-        align(center, text(size: large,
-          [#i18n("major", lang: lang) #school.specialisation]
-        ))
-        v(2em)
+      study_field = if school.specialisation != none {
+        study_field + school.specialisation
+      } else {
+        study_field
       }
+
+      if school.orientation != none or school.specialisation != none {
+        align(center, text(
+          size: larger,
+          fill: text-color,
+          study_field
+        ))
+        v(1em)
+      }
+
     }
 
     if extra-content-top != none {
       extra-content-top
     }
 
-    // BACHELOR'S THESIS / Midterm Report
-    if template == "thesis" {
-      align(center, text(size: huge,
-        [*#i18n("thesis-title", lang: lang)*]
-      ))
-      v(1em)
-    } else if template == "midterm"{
-      align(center, text(size: huge,
-        [*#i18n("midterm-title", lang: lang)*]
+    // Title
+    let _type-report-title = if template == "bachelor" {
+      i18n("bachelor-title", lang: lang)
+    } else if template == "midterm" {
+      i18n("midterm-title", lang: lang)
+    } else if template == "pa" {
+      i18n("pa-title", lang: lang)
+    } else if template == "pi" {
+      i18n("pi-title", lang: lang)
+    } else if template == "master" {
+      i18n("tm-title", lang: lang)
+    } else {
+      none
+    }
+    if _type-report-title != none {
+      align(center, text(
+        size: huge,
+        fill: text-color,
+        [*#_type-report-title*]
       ))
       v(1em)
     }
 
     // DIPLOMA YEAR
-    align(center, text(size: huge,
-      [*#i18n("diploma", lang: lang) #date.display("[year]")*]
-    ))
-    v(1em)
+    if template == "bachelor" {
+      align(center, text(
+        size: huge,
+        fill: text-color,
+        [*#i18n("diploma", lang: lang) #date.display("[year]")*]
+      ))
+      v(1em)
+    } else if template == "master" {
+      let date-1 = date - duration(days: 365)
+      align(center, text(
+        size: huge,
+        fill: text-color,
+        [*#i18n("diploma", lang: lang) #date-1.display("[year]")-#date.display("[year]")*]
+      ))
+      v(1em)
+    }
 
     // AUTHORs
     align(center, text(size: large, {
@@ -134,9 +169,16 @@
     }))
 
     titlebox(
-      title: title,
-      subtitle: subtitle,
+      title: text(title, fill: text-color),
+      subtitle: text(subtitle, fill: text-color),
+      linecolor: text-color,
     )
+
+    if is-confidential {
+      align(center,
+        image(condidential, width: 4cm)
+      )
+    }
 
     if extra-content-bottom != none {
       extra-content-bottom
@@ -273,7 +315,7 @@
       #align(center)[
         #heading(level: 3, numbering: none, outlined: false)[
           #text(15pt)[
-            #i18n("thesis-title", lang: lang)\ | #h(0.3cm) #year #h(0.3cm) |
+            #i18n("bachelor-title", lang: lang)\ | #h(0.3cm) #year #h(0.3cm) |
           ]
         ]
       ]
