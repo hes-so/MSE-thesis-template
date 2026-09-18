@@ -1,4 +1,4 @@
-#import "@preview/hes-so-package:0.0.4": *
+#import "@preview/hes-so-package:0.0.5": *
 #import "@preview/mse-thesis-template:0.0.1": *
 
 //-------------------------------------
@@ -33,7 +33,7 @@
       gender      : "masculin",  // ["masculin"|"feminin"|"inclusive"]
       name        : "Firstname Lastname",
       email       : "firstname.lastname@master.hes-so.ch",
-      degree      : "PA",
+      degree      : "Master",
       affiliation : "HES-SO",
       place       : "Lausanne",
       url         : "https://hes-so.ch",
@@ -63,7 +63,7 @@
 // Display Options for additional pages
 #let display = (
   report-info: true,  // [true|false] display report info with declaration of honor
-  thesis-data: true,  // [true|false] display thesis data page
+  thesis-data: false,  // [true|false] display thesis data page
   summary: true,      // [true|false] display summary page
 )
 
@@ -103,6 +103,8 @@
   school.specialisation = "Embedded"
 }
 
+#let is-confidential = true // [true|false] display confidential notice on title page
+
 #let date = (
   submission: datetime(year: 2026, month: 8, day: 14),
   mid-term-submission: datetime(year: 2026, month: 5, day: 1),
@@ -111,7 +113,7 @@
 
 #let logos = (
   main: project-logo,
-  topleft: image(logos.mse, width: 6cm),
+  topleft: image(logos.mse, width: 7.5cm),
   topright: image(logos.hesso-full, width: 4cm),
   bottomleft: none,
   bottomright: image(logos.swissuniversities, width: 5cm),
