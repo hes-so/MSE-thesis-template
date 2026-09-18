@@ -140,7 +140,7 @@
 )
 
 #let fonts = (
-  text: "Libertinus Serif",
+  text: ("Helvetica", "Arial", "Liberation Sans"),
   mono: "DejaVu Sans Mono",
   math: "New Computer Modern Math",
 )
