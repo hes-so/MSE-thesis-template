@@ -2,7 +2,7 @@
 // Description: Custom pages for the thesis template
 // Base on the work of Silvan Zahno (HEI-Vs)
 //
-#import "@preview/hes-so-package:0.0.4": *
+#import "@preview/hes-so-package:0.0.5": *
 
 #let format-email(email) = {
   if email == none {
@@ -27,6 +27,7 @@
   title: none,
   subtitle: none,
   template: "thesis",
+  is-confidential: false,
   date: datetime.today(),
   lang: "en",
   school: (
@@ -137,6 +138,12 @@
       title: title,
       subtitle: subtitle,
     )
+
+    if is-confidential {
+      align(center,
+        image(condidential, width: 4cm)
+      )
+    }
 
     if extra-content-bottom != none {
       extra-content-bottom

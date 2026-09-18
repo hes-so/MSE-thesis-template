@@ -2,7 +2,7 @@
 // Description: MSE Thesis Typst Template
 // Base on the work of Silvan Zahno (HEI-Vs)
 //
-#import "@preview/hes-so-package:0.0.4": *
+#import "@preview/hes-so-package:0.0.5": *
 #import "pages-thesis.typ": page-title-thesis, summary, page-reportinfo, page-pdf
 
 #let sanitize-author = apply-dict-defaults.with(
@@ -84,6 +84,7 @@
   expert: (),
   partner: (),
   school: none,
+  is-confidential: false,
   date: (
     submission: datetime.today(),
     mid-term-submission: datetime.today(),
@@ -296,6 +297,7 @@
     page-title-thesis(
       title: doc.title,
       subtitle: doc.subtitle,
+      is-confidential: is-confidential,
       date: date.submission,
       lang: option.lang,
       template: option.template,

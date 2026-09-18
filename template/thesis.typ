@@ -20,6 +20,7 @@
   expert: expert,
   // partner: expert,
   school: school,
+  is-confidential: is-confidential,
   date: date,
   tableof: tableof,
   logos: logos,
