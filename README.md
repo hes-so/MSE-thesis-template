@@ -76,6 +76,7 @@ All metadata is optional, but it is recommended to fill in as much as possible. 
 | `school.orientation`            | _content_                                     | Major of the school.                                                                                |
 | `school.specialisation`         | _content_                                     | Specialisation of the degree program.                                                               |
 | `school.url`                    | _string_                                      | URL of the school.                                                                                  |
+| `is-confidential`               | _boolean_                                     | Indicates whether the document is confidential.                                                     |
 | `date`                          | _datetime_                                    | Date metadata of the document                                                                       |
 | `date.submission`               | _datetime_                                    | Submission date of the document                                                                     |
 | `date.mid-term-submission`      | _datetime_                                    | Mid-term submission date of the document                                                            |
