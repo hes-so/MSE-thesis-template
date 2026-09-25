@@ -10,7 +10,7 @@
   - *Encountered Difficulties*: Acknowledge and address any challenges or obstacles encountered during the course of your research.
   - *Future Perspectives*: Offer insights into potential avenues for future research or practical applications stemming from your findings.
 
-  While you keep the conclusion of your thesis short and to the point, you deal with your results in more details in the discussion. There is no new informations in the conclusion.
+  While you keep the conclusion of your thesis short and to the point, you deal with your results in more detail in the discussion. There is no new information in the conclusion.
 ]
 
 == Project summary
