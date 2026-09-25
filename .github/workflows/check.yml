@@ -36,6 +36,17 @@ jobs:
           fi
           echo "All versions match: $REF_VERSION"
 
+          # Check HES-SO package dependency version consistency
+          HES_SO_METADATA=$(grep -o '@preview/hes-so-package:[0-9.]\+' template/metadata.typ | head -n1 | awk -F: '{print $2}')
+          HES_SO_HELPERS=$(grep -o '@preview/hes-so-package:[0-9.]\+' lib/helpers.typ | head -n1 | awk -F: '{print $2}')
+          echo "hes-so (metadata.typ): $HES_SO_METADATA"
+          echo "hes-so (helpers.typ):  $HES_SO_HELPERS"
+          if [ -z "$HES_SO_METADATA" ] || [ -z "$HES_SO_HELPERS" ] || [ "$HES_SO_METADATA" != "$HES_SO_HELPERS" ]; then
+            echo "hes-so-package version mismatch detected between template/metadata.typ and lib/helpers.typ!"
+            exit 1
+          fi
+          echo "hes-so-package versions match: $HES_SO_METADATA"
+
 
   check-build:
     needs: [get-ref-version]
