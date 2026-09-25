@@ -76,6 +76,7 @@ All metadata is optional, but it is recommended to fill in as much as possible. 
 | `school.orientation`            | _content_                                     | Major of the school.                                                                                |
 | `school.specialisation`         | _content_                                     | Specialisation of the degree program.                                                               |
 | `school.url`                    | _string_                                      | URL of the school.                                                                                  |
+| `is-confidential`               | _boolean_                                     | Indicates whether the document is confidential.                                                     |
 | `date`                          | _datetime_                                    | Date metadata of the document                                                                       |
 | `date.submission`               | _datetime_                                    | Submission date of the document                                                                     |
 | `date.mid-term-submission`      | _datetime_                                    | Mid-term submission date of the document                                                            |
@@ -99,7 +100,7 @@ All metadata is optional, but it is recommended to fill in as much as possible. 
 | `bib.display`                   | _boolean_                                     | Display bibliography (default: `true`)                                                              |
 | `bib.path`                      | _string_                                      | Path to the bibliography file (default: `"/tail/bibliography.bib"`)                                 |
 | `bib.style`                     | _string_                                      | Style of the bibliography (default: `"ieee"`)                                                       |
-| `fonts.text`                    | _string_                                      | Fonts used for text (default: `"Libertinus Serif"`)                                                 |
+| `fonts.text`                    | _array_of_string_                             | Fonts used for text (default: `("Helvetica", "Arial", "Liberation Sans")`)                          |
 | `fonts.mono`                    | _string_                                      | Fonts used for raw text or sourcecode (default: `"DejaVu Sans Mono"`)                               |
 | `fonts.math`                    | _string_                                      | Fonts used for math equations (default: `"New Computer Modern Math"`)                               |
 
@@ -182,7 +183,7 @@ If you encounter any issues or have questions regarding the course or any of the
 
 ## Changelog
 
-All notable changes to this project are documented in the [CHANGELOG.md](https://github.com/hes-so/MSE-thesis-template/blob/main/CHANGELOG.md) file.
+All notable changes to this project are documented on each [releases](https://github.com/hes-so/MSE-thesis-template/releases).
 
 ## Find us on
 
