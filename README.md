@@ -15,13 +15,13 @@
   <br>
 </div>
 
-This is a Typst template for a PA, PI or TM at the [MSE HES-SO](https://www.hes-so.ch/master/hes-so-master/formations/engineering). More templates can the found in our [GitHub organization](https://github.com/hes-so)
+This is a Typst template for a PA, PI or TM at the [MSE HES-SO](https://www.hes-so.ch/master/hes-so-master/formations/engineering). More templates can be found in our [GitHub organization](https://github.com/hes-so).
 
 ![Image of MSE-thesis-template document](./sample.png)
 
 ## Using the template
 
-1. In the `Typst` Univers select the `mse-thesis-template` template. Locally you can use the Typst CLI to initialise the project:
+1. In the `Typst` Universe select the `mse-thesis-template` template. Locally you can use the Typst CLI to initialise the project:
 
    ```bash
    # from the typst universe
@@ -34,10 +34,10 @@ All metadata is optional, but it is recommended to fill in as much as possible. 
 
 | Metadata                        | Type                                          | Description                                                                                         |
 | ------------------------------- | --------------------------------------------- |-----------------------------------------------------------------------------------------------------|
-| `options`                       | _dictionary_                                  | These are fixed values for the document, who doesn't contribute to the content.                     |
+| `option`                        | _dictionary_                                  | Fixed values for the document which don't contribute to the content.                                |
 | `option.type`                   | _string_ ("draft","final")                    | Type of the document. "final" will omit some text at the beginning of chapters (default: `"final"`) |
-| `option.lang`                   | _string_ ("en", "fr", "de")                   | Language of the document. Many element will be changed accordingly (default:`"en"`)                 |
-| `option.template`               | _string_ ("thesis", "midterm")                | Template of the document (default: `"thesis"`)                                                      |
+| `option.lang`                   | _string_ ("en", "fr", "de")                   | Language of the document. Many elements will be changed accordingly (default:`"en"`)                |
+| `option.template`               | _string_ ("pa", "pi", "master", "bachelor", "midterm", "thesis") | Template of the document, sets the title page wording (default: `"thesis"`)      |
 | `doc`                           | _dictionary_                                  | Document metadata                                                                                   |
 | `doc.title`                     | _content_                                     | Title of the document.                                                                              |
 | `doc.subtitle`                  | _content_                                     | Subtitle of the document.                                                                           |
@@ -76,7 +76,7 @@ All metadata is optional, but it is recommended to fill in as much as possible. 
 | `school.orientation`            | _content_                                     | Major of the school.                                                                                |
 | `school.specialisation`         | _content_                                     | Specialisation of the degree program.                                                               |
 | `school.url`                    | _string_                                      | URL of the school.                                                                                  |
-| `date`                          | _datetime_                                    | Date matadata of the document                                                                       |
+| `date`                          | _datetime_                                    | Date metadata of the document                                                                       |
 | `date.submission`               | _datetime_                                    | Submission date of the document                                                                     |
 | `date.mid-term-submission`      | _datetime_                                    | Mid-term submission date of the document                                                            |
 | `date.today`                    | _datetime_                                    | Today's date of the document                                                                        |
@@ -99,9 +99,9 @@ All metadata is optional, but it is recommended to fill in as much as possible. 
 | `bib.display`                   | _boolean_                                     | Display bibliography (default: `true`)                                                              |
 | `bib.path`                      | _string_                                      | Path to the bibliography file (default: `"/tail/bibliography.bib"`)                                 |
 | `bib.style`                     | _string_                                      | Style of the bibliography (default: `"ieee"`)                                                       |
-| `fonts.text`                    | _string_                                      | Fonts used for text (default: `"Libertinus Serif"`                                                  |
-| `fonts.mono`                    | _string_                                      | Fonts used for raw text or sourcecode (default: `"DejaVu Sans Mono"`                                |
-| `fonts.math`                    | _string_                                      | Fonts used for math equations (default: `"New Computer Modern Math"`                                |
+| `fonts.text`                    | _string_                                      | Fonts used for text (default: `"Libertinus Serif"`)                                                 |
+| `fonts.mono`                    | _string_                                      | Fonts used for raw text or sourcecode (default: `"DejaVu Sans Mono"`)                               |
+| `fonts.math`                    | _string_                                      | Fonts used for math equations (default: `"New Computer Modern Math"`)                               |
 
 3. Write your content in the `thesis.typ` file as well as the other files in the `main/` folder.
 
@@ -160,11 +160,17 @@ typst compile thesis.typ --input type="draft" --input lang="de"
 
 ## Help
 
-If you need help writting your document look at the [Typst documentation](https://typst.app/docs/) or if ou need more help with the template specifics look at the document Guide to Typst:
+If you need help writing your document look at the [Typst documentation](https://typst.app/docs/) or if you need more help with the template specifics look at the document Guide to Typst:
 [EN](https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-en_minimal.pdf)
 [DE](https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-de_minimal.pdf)
 [FR](https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-fr_minimal.pdf).
-IF you need help writing your thesis look at the document [Guide-to-Thesis](https://github.com/hei-templates/hei-synd-thesis/blob/c218181f4f6a12938f5c0d7ef939d7075fcc4fff/guide-to-thesis.pdf)
+If you need help writing your thesis look at the document [Guide-to-Thesis](https://github.com/hei-templates/hei-synd-thesis/blob/c218181f4f6a12938f5c0d7ef939d7075fcc4fff/guide-to-thesis.pdf)
+
+## Credits
+
+This template is based on the HEI-Vs templates
+[hei-synd-thesis](https://github.com/hei-templates/hei-synd-thesis) and
+[hei-synd-report](https://github.com/hei-templates/hei-synd-report).
 
 ## Contributing
 
