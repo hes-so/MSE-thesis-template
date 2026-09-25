@@ -166,6 +166,12 @@ If you need help writing your document look at the [Typst documentation](https:/
 [FR](https://github.com/hes-so/HES-SO-package/releases/latest/download/guide-to-typst-fr_minimal.pdf).
 If you need help writing your thesis look at the document [Guide-to-Thesis](https://github.com/hei-templates/hei-synd-thesis/blob/c218181f4f6a12938f5c0d7ef939d7075fcc4fff/guide-to-thesis.pdf)
 
+## Credits
+
+This template is based on the HEI-Vs templates
+[hei-synd-thesis](https://github.com/hei-templates/hei-synd-thesis) and
+[hei-synd-report](https://github.com/hei-templates/hei-synd-report).
+
 ## Contributing
 
 All notable information about contributing to this project can be found in the [CONTRIBUTING.md](https://github.com/hes-so/MSE-thesis-template/blob/main/CONTRIBUTING.md) file.
